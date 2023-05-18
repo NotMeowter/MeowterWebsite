@@ -1,20 +1,23 @@
-body {background-color: #000000;}
+body {
+  background-image: linear-gradient(#0f0f0f, #000000);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+html {
+    height: 100%;
+}
+
 .center-space {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  margin-bottom: 3cm;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
 #shake:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
+  /* Start the shake animation and make the animation last for 0.3 seconds */
+  animation: shake 0.38s;
 
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
@@ -33,8 +36,10 @@ body {background-color: #000000;}
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-input {
-  caret-color: red;
+
+#shake {
+  max-width: 400px;
+  max-height: auto;
 }
 #cat {
   transition: transform .2s; /* Animation */
@@ -44,25 +49,111 @@ input {
 #cat:hover {
   transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
 #cat {
+  border: ridge #141414 5px;
   width: 100px;
   height: 100px;
 }
-#shake {
-  max-width: 400px;
-  max-height: auto;
+
+.center{
+  border: ridge #494949 5px;
+  width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0f0f0f;
 }
-#Card {
-  margin-top: 100px;
-}
-#Card {
-  max-width: 400px;
-  max-height: auto;
+
+#Card{
+  width: 130px;
+  display: block;
+  display: inline-block;
 }
 #Card {
   transition: transform .2s; /* Animation */
-  margin: 50 auto;
+  margin: 0 auto;
 }
+
 #Card:hover {
-  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(0.95); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#minecraft {
+  color: white;
+  font-family: "mojanglesregular", sans-serif;
+}
+#comic {
+  color: white;
+  font-family: "COMIC", sans-serif
+}
+@font-face {
+    font-family: 'mojanglesregular';
+    src: url('mojangles-webfont.woff2') format('woff2'),
+         url('mojangles-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face{
+    font-family: COMIC;
+    src: url(fonts/COMIC.TTF);
+}
+h1 {
+  color: white;
+  font-family: sans-serif;
+}
+p {
+  color: white;
+  font-family: sans-serif;
+}
+
+.rainbow {
+  animation: colorRotateRainbow 6s linear 0s infinite;
+}
+
+@keyframes colorRotateRainbow {
+  from {
+    color: #ff0000;
+  }
+  10% {
+    color: #ff8000;
+  }
+  25% {
+    color: #ffff00;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #0000ff;
+  }
+  100% {
+    color: #8000ff;
+  }
+}
+
+.pink {
+  animation: colorRotatePink 6s linear 0s infinite;
+}
+
+@keyframes colorRotatePink {
+  from {
+    color: #ffd2de;
+  }
+  10% {
+    color: #ffb0c6;
+  }
+  50% {
+    color: #ff88a9;
+  }
+  75% {
+    color: #ffb0c6;
+  }
+  100% {
+    color: #ffd2de;
+  }
+}
+#construction {
+  width: 100%;
+  height: auto;
 }
