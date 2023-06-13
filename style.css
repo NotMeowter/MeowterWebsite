@@ -31,8 +31,8 @@ html {
   transition: transform .2s;
 }
 #logo{
-  max-width: 40%;
-  max-height: auto;
+  max-width: 50%;
+    max-height: auto;
 }
 
 #cat {
